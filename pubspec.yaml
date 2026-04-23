@@ -1,0 +1,25 @@
+name: heart_sdf_breakdown
+description: "Explains how a heart shape is rendered using signed distance fields."
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.11.4
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_shaders: ^0.1.0
+  textf: ^1.2.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  shaders:
+    - shaders/heartsdf.frag
