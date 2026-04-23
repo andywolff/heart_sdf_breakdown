@@ -333,16 +333,9 @@ class ShaderPainter extends CustomPainter {
 
   @override
   bool shouldRepaint(covariant CustomPainter oldDelegate) {
-    // // Always repaint for the shader animation.
-    // return true;
-
-    // When I tried something like the below,
-    // the shader did not update consistently during animation.
-    // TODO: investigate this in more detail.
-
     return oldDelegate is ShaderPainter &&
-        oldDelegate._drawStepIndex != _drawStepIndex &&
-        oldDelegate._shouldRenderDebug != _shouldRenderDebug;
+        (oldDelegate._drawStepIndex != _drawStepIndex ||
+            oldDelegate._shouldRenderDebug != _shouldRenderDebug);
   }
 }
 
